@@ -1,0 +1,812 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.background-sticky {
+  background: url("../images/madeira.jpeg") repeat fixed 100%;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+/* FOOTER BEGINS */
+
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #111;
+  width: 100%;
+  padding-top: 40px;
+  color: #fff;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-content h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+
+.socials li {
+  margin: 0 10px;
+}
+
+.socials a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.socials a i {
+  font-size: 1.1rem;
+  transition: color 0.4s ease;
+}
+
+.socials a:hover i {
+  color: #d0af84;
+}
+
+.footer-bottom {
+  background: #000;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.footer-bottom span {
+  text-transform: uppercase;
+  opacity: 0.4;
+  font-weight: 200;
+}
+
+/* FOOTER ENDS */
+
+
+/*****************\ HOME PAGE BEGINS /*****************/
+
+/* NAVBAR BEGINS */
+
+header nav {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 0 5%;
+  height: 100px;
+  background-color: transparent;
+}
+
+header nav .logo {
+  float: left;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  color: #fff;
+}
+
+.logo img{
+  cursor: pointer;
+}
+
+header nav .nav-links {
+  float: right;
+  padding: 0;
+  margin: 0;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header nav .nav-links li {
+  list-style: none;
+  letter-spacing: 4px;
+}
+
+header nav .nav-links li::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #d0af84;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+header nav .nav-links li:hover::after {
+  width: 100%;
+}
+
+header nav .nav-links a {
+  display: block;
+  padding: 1em;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+#nav-toggle {
+  position: absolute;
+  top: -100px;
+}
+
+header nav .burger {
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+header nav .burger .line {
+  width: 30px;
+  height: 5px;
+  background-color: #fff;
+  margin: 5px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* NAVBAR ENDS */
+
+/* SLIDER BEGINS */
+
+#slider {
+  overflow: hidden;
+}
+
+#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 20s slider infinite;
+}
+
+#slider figure img {
+  width: 20%;
+  height: 100vh;
+  float: left;
+  object-fit: cover;
+}
+
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}
+
+/* SLIDER ENDS */
+
+/* BANNER-TITLE BEGINS */
+
+#banner-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+}
+
+.home-title {
+  text-align: center;
+  font-size: 1.8vw;
+  color: #fff;
+  margin-bottom: 75px;
+  font-weight: bold;
+}
+
+/* BANNER-TITLE ENDS */
+
+/* BANNER-BTN BEGINS */
+
+.home-btn, .reservas-btn {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  padding: 10px 30px;
+  text-decoration: none;
+  letter-spacing: 4px;
+  background-color: transparent;
+  color: #fff;
+  border-color: transparent;
+  transition: 0.5s;
+  overflow: hidden;
+  font-size: 1.8vw;
+  font-family: 'Nanum Brush Script';
+}
+
+.reservas-btn {
+  font-size: 0.8vw;
+  font-family: 'Poppins';
+}
+
+#banner-title a {
+  text-decoration: none;
+}
+
+.home-btn:before, .reservas-btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #d0af84;
+  border-left: 2px solid #d0af84;
+  transition: 0.5s;
+}
+
+.home-btn:hover:before, .reservas-btn:hover:before {
+  width: 100%;
+  height: 100%;
+}
+
+.home-btn:after, .reservas-btn:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #d0af84;
+  border-right: 2px solid #d0af84;
+  transition: 0.5s;
+}
+
+.home-btn:hover:after, .reservas-btn:hover:after {
+  width: 100%;
+  height: 100%;
+}
+
+/* BANNER-BTN ENDS */
+
+/*****************\ HOME PAGE ENDS /******************\
+|*****************************************************|
+\*****************\ ABOUT US BEGINS /*****************/
+
+/* BACKGROUND BEGINS */
+
+.parallax {
+  background: url("../images/cozinha.jpg") repeat fixed 100%;
+  background-position: center;
+  width: 100%;
+  object-fit: cover;
+}
+
+.parallax-inner {
+  padding: 20% 0;
+}
+
+/* BACKGROUND BEGINS */
+
+/* TEXT BEGINS */
+
+.aboutUs-row {
+  position: absolute;
+  margin: 15% auto;
+  left: 0;
+  right: 0;
+  width: 50%;
+  line-height: 2;
+  color: #fff;
+  font-size: 2em;
+}
+
+.aboutUs-img {
+  width: 25%;
+  float: left;
+  margin-right: 30px;
+}
+
+.aboutUs-text-cozinha {
+  text-align: center;
+  font-size: 2.5em;
+  color: #fff;
+  font-weight: bold;
+  margin: 0 20%;
+}
+
+/* TEXT BEGINS */
+
+/* GALLERY BEGINS */
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery {
+  display: block;
+  float:left;
+  width: 18%;
+  padding: 10px;
+}
+
+.gallery-img {
+  width: 100%;
+  border-radius: 5px;
+  padding: 0 20px 20px;
+}
+
+.gallery-img:hover {
+  opacity: 0.5;
+  transition: 0.9s;
+}
+
+
+/* GALLERY ENDS */
+
+/******************\ ABOUT US ENDS /******************\
+|*****************************************************|
+\*****************\ MENU PAGE BEGINS /****************/
+
+
+.background-sticky-menu {
+  background: url("../images/madeira.jpeg") repeat fixed 100%;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.menu-container {
+  width: 80%;
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 15%;
+}
+
+.menu-title {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 60px;
+}
+
+.menu-title h1 {
+  text-transform: capitalize;
+  font-size: 36px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 20px;
+}
+
+.menu-title h1:before {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 2px;
+  background-color: #d0af84;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.menu-item {
+  flex-basis: 580px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #d0af84;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menu-item:nth-last-child(1), .menu-item:nth-last-child(2) {
+  border-bottom: 0;
+}
+
+.menu-item img {
+  max-width: 200px; /* REDIMENSIONAR NO PAINT E DEPOIS APAGAR ESTA LINHA DE CÓDIGO */
+  margin-right: 30px;
+  border-radius: 50%;
+  border: 1px solid #d0af84;
+  padding: 3px;
+  transition: 0.5s;
+}
+
+.menu-item:hover img {
+  border-radius: 0;
+}
+
+.menu-item h4 {
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 22px;
+  border-bottom: 1px dashed #d0af84;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+
+.menu-item h4 span{
+  float: right;
+  color: #d0af84;
+}
+
+.menu-content p {
+  color: #fff;
+  margin-top: 20px;
+}
+
+
+/********************\ MENU PAGE ENDS /*******************\
+|*********************************************************|
+\*****************\ RESERVAS PAGE BEGINS /****************/
+
+/* CONTACT ME FORM */
+
+.container {
+  width: 100%;
+  padding: 5%; /*20px*/
+  animation: popup 0.5s ease forwards;
+}
+
+.container h2 {
+  width: 100%;
+  color: #fff;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.container .row100{
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+}
+
+.container .row100 .col{
+  position: relative;
+  width: 100%;
+  padding: 0 10px;
+  margin: 30px 0 10px;
+  transition: 0.5s;
+}
+
+.container .row100 .col p a{
+  text-decoration: none;
+}
+
+.container .row100 .inputBox{
+  position: relative;
+  width: 100%;
+  height: 40px;
+  color: #fff;
+}
+
+.container .row100 .inputBox input,
+.container .row100 .inputBox.textarea textarea {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  padding: 0 10px;
+  z-index: 1;
+  color: #000;
+}
+
+.container .row100 .inputBox .text{
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 40px;
+  font-size: 18px;
+  padding: 0 10px;
+  display: block;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.container .row100 .inputBox input:focus + .text,
+.container .row100 .inputBox input:valid + .text {
+  top: -35px;
+  left: -10px;
+}
+
+.container .row100 .inputBox .line {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #d0af84;
+  transition: 0.5s;
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.container .row100 .inputBox input:focus ~ .line,
+.container .row100 .inputBox input:valid ~ .line {
+  height: 100%;
+}
+
+.container .row100 .inputBox.textarea {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  padding: 10px 0;
+}
+
+.container .row100 .inputBox.textarea textarea {
+  height: 100%;
+  resize: none;
+}
+
+.container .row100 .inputBox textarea:focus + .text,
+.container .row100 .inputBox textarea:valid + .text {
+  top: -35px;
+  left: -10px;
+}
+
+.container .row100 .inputBox textarea:focus ~ .line,
+.container .row100 .inputBox textarea:valid ~ .line {
+  height: 100%;
+}
+
+input[type="submit"]{
+  border: none;
+  padding: 7px 35px;
+  cursor: pointer;
+  outline: none;
+  background: #d0af84;
+  color: #000;
+  font-size: 18px;
+  border-radius: 2px;
+}
+
+@keyframes popup {
+  70%
+  {
+    transform: translateY(100px);
+  }
+  100%
+  {
+    transform: translateY(70px);
+  }
+}
+
+/*@keyframes popout{
+  70%
+  {
+    transform: translateY(50px);
+  }
+  100%
+  {
+    transform: translateY(0px);
+  }
+}*/
+
+
+
+.table-content, .table-content-2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  color: #fff;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 200px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.table-content {
+  top: 50%;
+  left: 25%;
+}
+
+.table-content-2 { 
+  top: 50%;
+  left: 70%;
+}
+
+
+.table-content thead tr {
+  background-color: #d0af84;
+  color: #fff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.table-content th, .table-content td {
+  padding: 12px 15px;
+}
+
+.table-content tbody tr {
+  border-bottom: 1px solid #fff;
+}
+
+
+.table-content tbody tr:last-of-type {
+  border-bottom: 2px solid #fff;
+}
+
+.table-content tbody tr.active-row {
+  font-weight: bold;
+  color: #fff;
+}
+
+
+@media (orientation: landscape) {
+  body header{
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .menu-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50%;
+  }
+
+  .background-sticky-menu {
+    height: 1700px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  /* NAVBAR BEGINS */
+  header nav .logo {
+    float: none;
+    width: auto;
+    justify-content: center;
+  }
+
+  header nav .nav-links {
+    float: none;
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    top: 100px;
+    bottom: 100%;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in-out;
+  }
+
+  header nav .nav-links a {
+    font-size: 20px;
+  }
+
+  header nav :checked ~ .nav-links {
+    bottom: 0;
+  }
+
+  header nav:checked {
+    opacity: 0.8;
+  }
+
+  header nav .burger {
+    display: block;
+  }
+
+  header nav :checked ~ .burger .line:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  header nav :checked ~ .burger .line:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+  header nav :checked ~ .burger .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50%;
+  }
+
+  .menu-item {
+    flex-basis: 480px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* NAVBAR ENDS */
+}
+
+
+
